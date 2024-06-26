@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxl3brp6wd1sq"]
+
+[ext_resource type="Texture2D" uid="uid://4swq27ekmneh" path="res://assets/sprites/tile_0040.png" id="1_ryww8"]
+
+[node name="Node_connection" type="Line2D"]
+texture_repeat = 2
+points = PackedVector2Array(0, 1)
+width = 5.0
+texture = ExtResource("1_ryww8")
+texture_mode = 1
