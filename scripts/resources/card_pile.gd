@@ -27,3 +27,9 @@ func shuffle() -> void:
 func clear() -> void:
 	cards.clear()
 	card_pile_size_changed.emit(cards.size())
+
+func _to_string():
+	var _card_strings: PackedStringArray = []
+	for i in range(cards.size()):
+		_card_strings.append("%s: %s" % [i, cards[i].id])
+	return "\n".join(_card_strings)
