@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv2agp3xc3je1"]
+
+[ext_resource type="Script" path="res://scripts/card_template.gd" id="1_h2q0o"]
+
+[node name="card_template" type="Control"]
+layout_mode = 3
+anchor_right = 0.216
+anchor_bottom = 0.404
+offset_right = -216.0
+offset_bottom = -202.0
+script = ExtResource("1_h2q0o")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 194.0
+offset_bottom = 201.0
+color = Color(0.642156, 0.285598, 0, 1)
+
+[node name="CardName" type="Label" parent="."]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 55.0
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 69.0
+offset_right = 192.0
+offset_bottom = 202.0

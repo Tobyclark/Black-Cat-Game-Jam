@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm6wfwjrax7ys"]
+
+[ext_resource type="Script" path="res://scenes/CardRewardManager.gd" id="1_srson"]
+
+[node name="card_reward_manager" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_srson")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 35.0
+offset_top = 119.0
+offset_right = 757.0
+offset_bottom = 368.0
+theme_override_constants/separation = 250
+alignment = 1

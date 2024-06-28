@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm34i1hbjbycg"]
+
+[ext_resource type="Script" path="res://scripts/RewardManager.gd" id="1_2r1ya"]
+[ext_resource type="FontFile" uid="uid://uqe7kue4b4tk" path="res://assets/fonts/m5x7.ttf" id="2_1yd86"]
+[ext_resource type="Script" path="res://scripts/RewardGenerator.gd" id="3_mumrf"]
+
+[node name="Rewards" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(6.7655, 8.4641)
+script = ExtResource("1_2r1ya")
+
+[node name="Background Dimmer" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 18.0
+scale = Vector2(6.2188, 3.37273)
+color = Color(0, 0, 0, 0.247059)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 48.9247
+offset_top = 0.236292
+offset_right = 96.9247
+offset_bottom = 59.2363
+color = Color(1, 1, 1, 0.203922)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 4.72988
+offset_right = 128.73
+offset_bottom = 45.0
+scale = Vector2(0.3, 0.3)
+theme_override_fonts/font = ExtResource("2_1yd86")
+theme_override_font_sizes/font_size = 22
+text = "Rewards"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 11.0
+offset_right = 184.0
+offset_bottom = 137.0
+scale = Vector2(0.3, 0.3)
+theme_override_constants/separation = 0
+
+[node name="SkipButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 60.3059
+offset_top = 50.921
+offset_right = 195.306
+offset_bottom = 81.921
+scale = Vector2(0.2, 0.2)
+text = "Skip"
+
+[node name="RewardGenerator" type="Node" parent="."]
+script = ExtResource("3_mumrf")
+
+[connection signal="pressed" from="SkipButton" to="." method="_on_skip_button_pressed"]
